@@ -1,0 +1,11 @@
+{
+  "name": "asips",
+  "version": "1.0.0",
+  "description": "Here is the proposal repository for the Avascriptions protocol and the ASC-20 protocol, you are welcome to propose or discuss and build stronger protocol together!",
+  "main": "validateProposal.js",
+  "scripts": {
+    "test": "ndoe validateProposal.js"
+  },
+  "author": "avascriptions",
+  "license": "GPLv3"
+}
