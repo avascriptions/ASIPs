@@ -2,7 +2,7 @@ const fs = require('fs');
 const path  = require('path');
 
 const pullRequestSHA = process.argv[2];
-const changedFiles = process.argv[3].split(',');
+const changedFiles = typeof process.argv[3] != 'undefined' ? process.argv[3].split(',') : [];
 const fields = ['asip', 'title', 'description', 'author', 'discussions-to', 'status', 'category', 'created', 'requires'];
 const statuses = [ 'Idea', 'Draft', 'Review', 'Final', 'Stagnant', 'Withdrawn' ]
 console.log(`Pull Request SHA: ${pullRequestSHA}`);
