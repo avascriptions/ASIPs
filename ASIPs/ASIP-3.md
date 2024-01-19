@@ -28,7 +28,7 @@ When a contract emits this event, the protocol should deploy a valid ASC-20 toke
 
 1. ticker:  Identifier of the asc-20 tokens
 2. max: Set max supply of the asc-20 tokens
-3. lim: Limit per inscription
+3. lim: Limit per mint
 
 After receiving this event, the indexer needs to retrieve corresponding information from the previously recorded list avascription asc-20 tokens. It's necessary to verify whether the ticker has been occupied. If valid, the ASC-20 token was deployed.
   
