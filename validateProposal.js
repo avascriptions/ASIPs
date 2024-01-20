@@ -52,5 +52,6 @@ function validateASIP(fileName) {
     if (!content.includes('## Rationale')) {
         throw new Error(`proposal missing the rationale`);
     }
+    console.log(fileName + ' was validated');
 }
 
