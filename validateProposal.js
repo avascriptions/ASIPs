@@ -2,14 +2,15 @@ const fs = require('fs');
 const path  = require('path');
 
 const pullRequestSHA = process.argv[2];
-const changedFiles = typeof process.argv[3] != 'undefined' ? process.argv[3].split(',') : [];
+// const changedFiles = typeof process.argv[3] != 'undefined' ? process.argv[3].split(',') : [];
 const fields = ['asip', 'title', 'description', 'author', 'discussions-to', 'status', 'category', 'created', 'requires'];
 const statuses = [ 'Idea', 'Draft', 'Review', 'Final', 'Stagnant', 'Withdrawn' ]
 console.log(`Pull Request SHA: ${pullRequestSHA}`);
-console.log(`Changed Files: ${changedFiles}`);
+// console.log(`Changed Files: ${changedFiles}`);
 
-for (const changedFile of changedFiles) {
-    validateASIP(changedFile);
+const proposals = fs.readdirSync('ASIPs/');
+for (const proposal of proposals) {
+    validateASIP(proposal);
 }
 
 function validateASIP(fileName) {
@@ -20,7 +21,7 @@ function validateASIP(fileName) {
     }
     
     // check file content
-    const fileContent = fs.readFileSync(fileName, 'utf8');
+    const fileContent = fs.readFileSync('ASIPs/' + fileName, 'utf8');
     if (!fileContent.startsWith('---')) {
         throw new Error('ASIP markdown file must start with a table');
     }

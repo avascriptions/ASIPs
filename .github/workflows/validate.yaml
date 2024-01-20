@@ -22,12 +22,7 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Get changed files
-      id: changes
-      run: echo "::set-output name=files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^ASIPs/')"
-
-
-    - name: Validate ASIPS Proposal
+    - name: Validate Proposals
       run: |
         # Assuming your validation script is a Node.js script
-        node validateProposal.js ${{ github.event.pull_request.head.sha }} "${{ steps.changes.outputs.files }}"
+        node validateProposal.js ${{ github.event.pull_request.head.sha }}
