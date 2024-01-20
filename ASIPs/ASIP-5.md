@@ -1,12 +1,12 @@
 ---
-asip: 4
+asip: 5
 title: Smart Contract Avascription ASC-20 Mints
 description: This proposal is used to allow smart contracts to support ASC-20 mints 
 author: fumeng00mike
 discussions-to: 
 status: Draft
 category: Core
-created: 2024-12-11
+created: 2024-1-19
 requires: 
 ---
 
@@ -24,7 +24,7 @@ Event signature:
 // "0x614d80f06cfac477421ae3965ae5468509fe25a330f9558e4a2cd9d60eefeb59"
 keccak256("avascriptions_protocol_MintASC20Token(addresss,string,uint256)");
 ```
-When a contract emits this event, the protocol should mint ASC-20 tokens to recipient address,provided:
+When a contract emits this event, the protocol should mint ASC-20 tokens to recipient address, provided:
 
 1. to: the address of the token recipient.
 2. ticker:  Identifier of the asc-20
@@ -52,4 +52,4 @@ Example 2:
 Here, Event 1's log will trigger the ASC-20 tokens mint. If calldata and Event 1 were both invalid, then Event 2's log would trigger the asc-20 tokens mint.
 
 ## Rationale
-We propose smart contract can mint avascription asc-20 tokens directly, meanwhile maintaining the 1-1 correspondence between avascription and AVAX transactions, enable eoa and smart contract to participate in token launches fairly.
+We propose smart contract can mint avascription asc-20 tokens directly, meanwhile maintaining the 1-1 correspondence between avascription and AVAX transactions, enabling eoa and smart contract to participate in token launches fairly.
