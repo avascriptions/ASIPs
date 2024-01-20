@@ -24,13 +24,11 @@ Event signature:
 // "0xd8de386cd760c4eb2cbf2916de17f3ade460658204bcc61332c3229e4da08e24"
 keccak256("avascriptions_protocol_ListASC20Token(addresss,string,uint256)");
 ```
-When a contract emits this event, valid ASC-20 tokens will be listed on smart contract of marketplace,provided:
+When a contract emits this event, valid ASC-20 tokens will be listed on smart contract of marketplace, provided:
 
-1. to: the address of the token recipient.typically,it will be marketplace contract address
+1. to: the address of the token recipient. typically, it will be marketplace contract address
 2. ticker: Identifier of the ASC-20 tokens
 3. amount: amount of listing ASC-20 tokens
-
-After receiving this event, the smart contract's ASC-20 tokens were listed; 
 
 ## Rationale
 Inscription ASC-20 token can be listed in the marketplace by EOA wallet, smart contracts can also own them. However, smart contracts cannot list them in the marketplace.
