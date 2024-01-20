@@ -1,5 +1,5 @@
 ---
-asip: 5
+asip: 3
 title: Smart Contract Avascription ASC-20 lists
 description: This proposal is used to allow smart contracts to support ASC-20 lists 
 author: fumeng00mike
