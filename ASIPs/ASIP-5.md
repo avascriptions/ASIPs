@@ -3,7 +3,7 @@ asip: 5
 title: Smart Contract Avascription ASC-20 Mints
 description: This proposal is used to allow smart contracts to support ASC-20 mints 
 author: fumeng00mike
-discussions-to: 
+discussions-to: https://discord.com/channels/1187753805798965289/1187772213278015568
 status: Draft
 category: Core
 created: 2024-1-19
