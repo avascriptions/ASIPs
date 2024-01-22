@@ -22,8 +22,8 @@ event avascriptions_protocol_ListASC20Token(
 ```
 Event signature:
 ```solidity
-// "1f0f492de8d9e8ca3685953a410a36f64a1c894db9a77d960337b2d4d83ae2e0"
-keccak256("avascriptions_protocol_ListASC20Token(addresss,addresss,string,uint256)");
+// "0xb2de1aec31252e2ec7dd0493ffe16c32a9f86939071394c278aad324fea582e2"
+keccak256("avascriptions_protocol_ListASC20Token(address,address,string,uint256)");
 ```
 When a contract emits this event, valid ASC-20 tokens will be listed on smart contract of marketplace, provided:
 
